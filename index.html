@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apple Calculator</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-700 flex items-center justify-center min-h-screen flex-col">
+    <div class="flex items-center text-3xl text-white mb-4 font-bold">
+        Powered by <img src="./public/apple-logo.png" class="ml-2" alt="logo">
+    </div>
+    
+  <div class="bg-black w-80 rounded-lg p-4 shadow-lg">
+    
+    <div id="display" class="bg-black text-white text-4xl h-20 mb-4 flex items-center justify-end p-4 rounded-md select-text cursor-text">
+        0
+    </div>      
+    
+    <div class="grid grid-cols-4 gap-3">
+      <button id="ac-btn" class="bg-gray-400 text-black rounded-btn h-16 w-16 hover-effect transition-transform duration-200" onclick="backspace()">AC</button>
+      <button class="bg-gray-400 text-black rounded-btn h-16 w-16 hover-effect transition-transform duration-200" onclick="toggleSign()">+/-</button>
+      <button class="bg-gray-400 text-black rounded-btn h-16 w-16 hover-effect transition-transform duration-200" onclick="inputOperator('%')">%</button>
+      <button style="background-color: #FF9500;" class="text-white rounded-btn h-16 w-16 text-2xl hover-effect transition-transform duration-200" onclick="inputOperator('/')">÷</button>
+      
+      <button class="bg-gray-700 text-white rounded-btn h-16 w-16 hover-effect transition-transform duration-200" onclick="inputNumber(7)">7</button>
+      <button class="bg-gray-700 text-white rounded-btn h-16 w-16 hover-effect transition-transform duration-200" onclick="inputNumber(8)">8</button>
+      <button class="bg-gray-700 text-white rounded-btn h-16 w-16 hover-effect transition-transform duration-200" onclick="inputNumber(9)">9</button>
+      <button style="background-color: #FF9500;" class="text-white rounded-btn h-16 w-16 text-2xl hover-effect transition-transform duration-200" onclick="inputOperator('*')">×</button>
+      
+      <button class="bg-gray-700 text-white rounded-btn h-16 w-16 hover-effect transition-transform duration-200" onclick="inputNumber(4)">4</button>
+      <button class="bg-gray-700 text-white rounded-btn h-16 w-16 hover-effect transition-transform duration-200" onclick="inputNumber(5)">5</button>
+      <button class="bg-gray-700 text-white rounded-btn h-16 w-16 hover-effect transition-transform duration-200" onclick="inputNumber(6)">6</button>
+      <button style="background-color: #FF9500;" class="text-white rounded-btn h-16 w-16 text-2xl hover-effect transition-transform duration-200" onclick="inputOperator('-')">-</button>
+      
+      <button class="bg-gray-700 text-white rounded-btn h-16 w-16 hover-effect transition-transform duration-200" onclick="inputNumber(1)">1</button>
+      <button class="bg-gray-700 text-white rounded-btn h-16 w-16 hover-effect transition-transform duration-200" onclick="inputNumber(2)">2</button>
+      <button class="bg-gray-700 text-white rounded-btn h-16 w-16 hover-effect transition-transform duration-200" onclick="inputNumber(3)">3</button>
+      <button style="background-color: #FF9500;" class="text-white rounded-btn h-16 w-16 text-2xl hover-effect transition-transform duration-200" onclick="inputOperator('+')">+</button>
+      
+      <button class="bg-gray-700 text-white rounded-full h-16 w-36 wide-btn hover-effect transition-transform duration-200" onclick="inputNumber(0)">0</button>
+      <button class="bg-gray-700 text-white rounded-btn h-16 w-16 hover-effect transition-transform duration-200" onclick="inputDecimal()">.</button>
+      <button style="background-color: #FF9500;" class="text-white rounded-btn h-16 w-16 text-2xl hover-effect transition-transform duration-200" onclick="calculateResult()">=</button>
+    </div>
+    
+  </div>
+  <script src="calculator.js"></script>
+</body>
+</html>
